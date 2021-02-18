@@ -1,0 +1,279 @@
+<>
+            <Box className={classes.mainContainer}>
+                {/*<PDFDownloadLink style={{marginLeft:'auto'}}document={<></><Quixote data={asset}/>} fileName={"Report Attivita.pdf"}>
+                    {({ blob, url, loading, error }) => (loading ? 'Caricamento...' : <IconButton className={classes.stdBtn} style={{color:'#71A8DB'}} variant="outlined"><PrintIcon style={{fontSize:'1.5vw'}}/></IconButton>)}
+                </PDFDownloadLink>*/}
+                <IconButton className={classes.stdBtn} style={{color:'#71A8DB',marginLeft:'auto'}} variant="outlined"><PrintIcon style={{fontSize:'1.5vw'}}/></IconButton>
+            <div>
+                {EditItems(flag,actToEdit)}
+            </div>
+                {/* BOX ASSET MESI*/}
+                <Box className={classes.aCont}>
+                    {/* 3 MESI*/}
+                    <Box className={classes.manRow}>
+                        {/* Singolo MESE*/}
+                        <Box className={classes.manCol}>
+                            {/* SINGOLO Asset*/}
+                            <Typography variant={'h6'} className={classes.month}>Gennaio</Typography>
+                            { (f.getFullYear() <= parseInt(getAnagraficaData().dataFine.split('-')[0])) ? 
+                            splitAsset(toShowTabs.filter(item => item.monthForm == 1)): (parseInt(getAnagraficaData().dataFine.split('-')[1]) - 
+                            parseInt(getAnagraficaData().dataInizio.split('-')[1]) >= 1) ? 
+                            splitAsset(toShowTabs.filter(item => item.monthForm == 1)) : null}
+                            </Box>
+                        {/* Singolo MESE*/}
+                        <Box className={classes.manCol}>
+                        <Typography variant={'h6'} className={classes.month}>Febbraio</Typography>
+                            {/* SINGOLO Asset*/}
+                            { (f.getFullYear() <= parseInt(getAnagraficaData().dataFine.split('-')[0])) ? 
+                            splitAsset(toShowTabs.filter(item => item.monthForm == 2)): (parseInt(getAnagraficaData().dataFine.split('-')[1]) - 
+                            parseInt(getAnagraficaData().dataInizio.split('-')[1]) >= 2) ? 
+                            splitAsset(toShowTabs.filter(item => item.monthForm == 2)) : null}
+                            </Box>
+                        {/* Singolo MESE*/}
+                        <Box className={classes.manCol}>
+                        <Typography variant={'h6'} className={classes.month}>Marzo</Typography>
+                            {/* SINGOLO Asset*/}
+                            { (f.getFullYear() <= parseInt(getAnagraficaData().dataFine.split('-')[0])) ? 
+                            splitAsset(toShowTabs.filter(item => item.monthForm == 3)): (parseInt(getAnagraficaData().dataFine.split('-')[1]) - 
+                            parseInt(getAnagraficaData().dataInizio.split('-')[1]) >= 3) ? 
+                            splitAsset(toShowTabs.filter(item => item.monthForm == 3)) : null}
+                            </Box>
+                        
+                    </Box>
+                    {/* 3 MESI*/}
+                    <Box className={classes.manRow}>
+                        {/* Singolo MESE*/}
+                        <Box className={classes.manCol}>
+                            {/* SINGOLO Asset*/}
+                            <Typography variant={'h6'} className={classes.month}>Aprile</Typography>
+                            { (f.getFullYear() <= parseInt(getAnagraficaData().dataFine.split('-')[0])) ? 
+                            splitAsset(toShowTabs.filter(item => item.monthForm == 4)): (parseInt(getAnagraficaData().dataFine.split('-')[1]) - 
+                            parseInt(getAnagraficaData().dataInizio.split('-')[1]) >= 4) ? 
+                            splitAsset(toShowTabs.filter(item => item.monthForm == 4)) : null}
+                            </Box>
+                        {/* Singolo MESE*/}
+                        <Box className={classes.manCol}>
+                        <Typography variant={'h6'} className={classes.month}>Maggio</Typography>
+                            {/* SINGOLO Asset*/}
+                            { (f.getFullYear() <= parseInt(getAnagraficaData().dataFine.split('-')[0])) ? 
+                            splitAsset(toShowTabs.filter(item => item.monthForm == 5)): (parseInt(getAnagraficaData().dataFine.split('-')[1]) - 
+                            parseInt(getAnagraficaData().dataInizio.split('-')[1]) >= 5) ? 
+                            splitAsset(toShowTabs.filter(item => item.monthForm == 5)) : null}
+                            </Box>
+                        {/* Singolo MESE*/}
+                        <Box className={classes.manCol}>
+                        <Typography variant={'h6'} className={classes.month}>Giugno</Typography>
+                            {/* SINGOLO Asset*/}
+                            { (f.getFullYear() <= parseInt(getAnagraficaData().dataFine.split('-')[0])) ? 
+                            splitAsset(toShowTabs.filter(item => item.monthForm == 6)): (parseInt(getAnagraficaData().dataFine.split('-')[1]) - 
+                            parseInt(getAnagraficaData().dataInizio.split('-')[1]) >= 6) ? 
+                            splitAsset(toShowTabs.filter(item => item.monthForm == 6)) : null}
+                            </Box>
+                        
+                    </Box>
+                    {/* 3 MESI*/}
+                    <Box className={classes.manRow}>
+                        {/* Singolo MESE*/}
+                        <Box className={classes.manCol}>
+                            {/* SINGOLO Asset*/}
+                            <Typography variant={'h6'} className={classes.month}>Luglio</Typography>
+                            { (f.getFullYear() <= parseInt(getAnagraficaData().dataFine.split('-')[0])) ? 
+                            splitAsset(toShowTabs.filter(item => item.monthForm == 7)): (parseInt(getAnagraficaData().dataFine.split('-')[1]) - 
+                            parseInt(getAnagraficaData().dataInizio.split('-')[1]) >= 7) ? 
+                            splitAsset(toShowTabs.filter(item => item.monthForm == 7)) : null}
+                            </Box>
+                        {/* Singolo MESE*/}
+                        <Box className={classes.manCol}>
+                        <Typography variant={'h6'} className={classes.month}>Agosto</Typography>
+                            {/* SINGOLO Asset*/}
+                            { (f.getFullYear() <= parseInt(getAnagraficaData().dataFine.split('-')[0])) ? 
+                            splitAsset(toShowTabs.filter(item => item.monthForm == 8)): (parseInt(getAnagraficaData().dataFine.split('-')[1]) - 
+                            parseInt(getAnagraficaData().dataInizio.split('-')[1]) >= 8) ? 
+                            splitAsset(toShowTabs.filter(item => item.monthForm == 8)) : null}
+                            </Box>
+                        {/* Singolo MESE*/}
+                        <Box className={classes.manCol}>
+                        <Typography variant={'h6'} className={classes.month}>Settembre</Typography>
+                            {/* SINGOLO Asset*/}
+                            { (f.getFullYear() <= parseInt(getAnagraficaData().dataFine.split('-')[0])) ? 
+                            splitAsset(toShowTabs.filter(item => item.monthForm == 9)): (parseInt(getAnagraficaData().dataFine.split('-')[1]) - 
+                            parseInt(getAnagraficaData().dataInizio.split('-')[1]) >= 9) ? 
+                            splitAsset(toShowTabs.filter(item => item.monthForm == 9)) : null}
+                            </Box>
+                        
+                    </Box>
+                    {/* 3 MESI*/}
+                    <Box className={classes.manRow}>
+                        {/* Singolo MESE*/}
+                        <Box className={classes.manCol}>
+                            {/* SINGOLO Asset*/}
+                            <Typography variant={'h6'} className={classes.month}>Ottobre</Typography>
+                            { (f.getFullYear() <= parseInt(getAnagraficaData().dataFine.split('-')[0])) ? 
+                            splitAsset(toShowTabs.filter(item => item.monthForm == 10)): (parseInt(getAnagraficaData().dataFine.split('-')[1]) - 
+                            parseInt(getAnagraficaData().dataInizio.split('-')[1]) >= 10) ? 
+                            splitAsset(toShowTabs.filter(item => item.monthForm == 10)) : null}
+                            </Box>
+                        {/* Singolo MESE*/}
+                        <Box className={classes.manCol}>
+                        <Typography variant={'h6'} className={classes.month}>Novembre</Typography>
+                            {/* SINGOLO Asset*/}
+                            { (f.getFullYear() <= parseInt(getAnagraficaData().dataFine.split('-')[0])) ? 
+                            splitAsset(toShowTabs.filter(item => item.monthForm == 11)): (parseInt(getAnagraficaData().dataFine.split('-')[1]) - 
+                            parseInt(getAnagraficaData().dataInizio.split('-')[1]) >= 11) ? 
+                            splitAsset(toShowTabs.filter(item => item.monthForm == 11)) : null}
+                            </Box>
+                        {/* Singolo MESE*/}
+                        <Box className={classes.manCol}>
+                        <Typography variant={'h6'} className={classes.month}>Dicembre</Typography>
+                            {/* SINGOLO Asset*/}
+                            { (f.getFullYear() <= parseInt(getAnagraficaData().dataFine.split('-')[0])) ? 
+                            splitAsset(toShowTabs.filter(item => item.monthForm == 12)): (parseInt(getAnagraficaData().dataFine.split('-')[1]) - 
+                            parseInt(getAnagraficaData().dataInizio.split('-')[1]) >= 12) ? 
+                            splitAsset(toShowTabs.filter(item => item.monthForm == 12)) : null}
+                            </Box>
+                        
+                    </Box>
+                    
+                </Box>
+
+                {/* BOX LAST ASSET */}
+                <Box className={classes.lCont}>
+                    <Box className={classes.actTop}>
+                        <Typography variant={'h6'} className={classes.actList}>Lista Attività</Typography>
+                        <img style={{cursor:'pointer'}} src={require('../../../assets/images/anagraficaContratto/manutenzione/addAsset.png')} className={classes.actIcon} onClick={e=> setFlagAdd(true)}/>
+                    </Box>
+                    {lastAct(asset)}
+                    {/* ALERT REMOVE ATTIVITA */}
+                    <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+                        <Alert onClose={handleClose} severity="success">
+                        This is a success message!
+                        </Alert>
+                    </Snackbar>
+                </Box>
+            </Box>
+
+            {/* DIALOG TO SHOW ALL ACTIVITY SINGLE MONTH*/}
+            <Dialog
+                open={openSingle}
+                maxWidth={'lg'}
+                fullWidth={true}
+                onClose={handleCloseSingle}
+                aria-labelledby="alert-dialog-title"
+                aria-describedby="alert-dialog-description"
+            >
+                <DialogTitle id="alert-dialog-title">Lista Attività {monthDISPLAY(cMonth)}</DialogTitle>
+                <DialogContent>
+                    <DialogContentText id="alert-dialog-description">
+                        {cData.map((e,index) => {
+                            return (
+                                <Box className={classes.actSingle}>
+                                    <Typography variant={'h6'} className={classes.actCode}>N. {index}</Typography>
+                                    <Typography variant={'subtitle2'} className={classes.actType}>{e.tipologia}</Typography>
+                                    <Box className={classes.actDescContainer}>
+                                        <Typography variant={'caption'} className={classes.actDesc}>{e.descrizione}</Typography>
+                                    </Box>
+                                        <Typography variant={'subtitle2'} className={classes.actTime}>{e.periodo}</Typography>
+                                </Box>
+                            )
+                        })}
+                    </DialogContentText>
+                </DialogContent>
+                <DialogActions>
+                    <Button onClick={handleCloseSingle} variant='outlined' className={classes.stdBtn}autoFocus>
+                        Chiudi
+                    </Button>
+                </DialogActions>
+            </Dialog>
+
+            {/* DIALOG TO ADD ACTIVITY*/}
+            <Dialog
+                open={flagAdd}
+                maxWidth={'sm'}
+                fullWidth={true}
+                onClose={e=> setFlagAdd(false)}
+                aria-labelledby="alert-dialog-title"
+                aria-describedby="alert-dialog-description"
+            >
+                <DialogTitle id="alert-dialog-title">Aggiungi Attività</DialogTitle>
+                <DialogContent>
+                    <DialogContentText id="alert-dialog-description">
+                        <Box>
+                            
+                            <Box className={classes.newActivityBox}>
+                                <InputLabel htmlFor="selectTipologia">* Tipologia Impianto</InputLabel>
+                                <Select
+                                    className={classes.defaultSelectBox}
+                                    labelId="selectTipologia"
+                                    id="selectTipologia"
+                                    value={nActivity.tipologia}
+                                    onChange={ e=> handleNewActivity(e,'tipologia')}
+                                    >
+                                    {cType.map(type => {
+                                        return (
+                                            <MenuItem value={type.Nome}>{type.Nome}</MenuItem>
+                                        )
+                                    })}
+                                    
+                                </Select>
+                            </Box>
+                            <Box className={classes.newActivityBox}>
+                            <InputLabel htmlFor="selectTipologia">* Descrizione dell'attività</InputLabel>
+                                <TextField
+                                    id="outline-multiline-static"
+                                    multiline
+                                    className={classes.defaultSelectBox}
+                                    rowsMax={8}
+                                    height={64}
+                                    rows={3}
+                                    value={nActivity.descrizione}
+                                    onChange={ e=> handleNewActivity(e,'descrizione')}
+                                />
+                            </Box>
+                            <Box className={classes.newActivityBox}>
+                                <InputLabel htmlFor="selectTipologia">* Periodo temporale</InputLabel>
+                                <Select
+                                    className={classes.defaultSelectBox}
+                                    labelId="selectTipologia"
+                                    id="selectTipologia"
+                                    value={nActivity.periodo}
+                                    onChange={ e=> handleNewActivity(e,'periodo')}
+                                    >
+                                    <MenuItem value={'Settimanale'}>Settimanale</MenuItem>
+                                    <MenuItem value={'Mensile'}>Mensile</MenuItem>
+                                    <MenuItem value={'Bimestrale'}>Bimestrale</MenuItem>
+                                    <MenuItem value={'Trimestrale'}>Trimestrale</MenuItem>
+                                    <MenuItem value={'Quadrimestrale'}>Quadrimestrale</MenuItem>
+                                    <MenuItem value={'Semestrale'}>Semestrale</MenuItem>
+                                    <MenuItem value={'Annuale'}>Annuale</MenuItem>
+                                </Select>
+                            </Box>
+                        </Box>
+                    </DialogContentText>
+                </DialogContent>
+                <DialogActions>
+                    <Button variant='outlined' className={classes.sbmtN} autoFocus onClick={async e => {
+                        e.preventDefault()
+                        let toUp = {
+                            token:getUserData().Token,
+                            tipologia:nActivity.tipologia,
+                            periodo:nActivity.periodo,
+                            descrizione:nActivity.descrizione,
+                            numContratto:(getAnagraficaData().numero).toString()
+                        }
+                        await createActivity(toUp.token,toUp.tipologia,toUp.periodo,toUp.descrizione,toUp.numContratto)
+                        await getActivityList('dd',getAnagraficaData().id)
+                        
+                        await delay(800)
+                        console.log(getActivityListData())
+                        setAsset( getActivityListData() )
+                        orderCalendar()
+                        setFlagAdd(false)
+                        //window.location.reload(false)
+                   }}>
+                        Aggiungi
+                    </Button>
+                </DialogActions>
+            </Dialog>
+
+        </>
+    
